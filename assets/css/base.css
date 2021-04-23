@@ -1,0 +1,50 @@
+:root {
+    --main-color: #F45B19;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.pd-2 {
+    padding: 2rem;
+}
+
+.mg-0 {
+    margin: 0 !important;
+}
+
+.active-icon {
+    color: #C0C9D2;
+}
+
+.active-button {
+    background-color: var(--main-color) !important;
+}
+
+.active-word {
+    color: var(--main-color) !important;
+    font-weight: 700;
+}
+
+
+
+

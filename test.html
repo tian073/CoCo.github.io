@@ -1,0 +1,71 @@
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeULBLLWvZRAQ7pDXs9s0T_tUQzpSClNc"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=API_KEY">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: -34.397, lng: 150.644},
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+<div id="map-canvas"></div>
+  </body>
+</html>
+<script type="text/javascript">
+    var map,
+        infowindow,
+        marker = new Array(),
+        old_id = 0,
+        defaultLatLng = new google.maps.LatLng(12.582493, 108.139325),
+        infoWindowArray = new Array(),
+        infowindow_array = new Array();
+    function loadMarker(myLocation, myInfoWindow, id){
+        marker[id] = new google.maps.Marker({position: myLocation, map: map, visible:true});
+        var popup = myInfoWindow;
+        infowindow_array[id] = new google.maps.InfoWindow({ content: popup});
+        google.maps.event.addListener(marker[id], 'mouseover', function() {
+            if (id == old_id) return;
+            if (old_id > 0) infowindow_array[old_id].close();
+            infowindow_array[id].open(map, marker[id]);
+            old_id = id;
+        });
+        google.maps.event.addListener(infowindow_array[id], 'closeclick', function() {
+            old_id = 0;
+        });
+    }
+    function moveToMaker(id){
+        var location = marker[id].position;
+        map.setCenter(location);
+        if (old_id > 0) infowindow_array[old_id].close();
+        infowindow_array[id].open(map, marker[id]);
+        old_id = id;
+    }
+    function initialize() {
+        var mapOptions = {
+            center: defaultLatLng,
+            zoom: 16,
+            scrollwheel : false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        map.setCenter(defaultLatLng);
+        infoWindowArray[7895] = '<div class="map_description"><div class="map_title">Trường mầm non Tuổi Thơ</div><div>Xã Ea Tiêu, huyện Cư Kuin, tỉnh Đắk Lắk</div></div>';
+        loadMarker(defaultLatLng, infoWindowArray[7895], 7895);
+        moveToMaker(7895);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
