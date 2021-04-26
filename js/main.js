@@ -72,7 +72,7 @@ window.onload = () => {
     // Own selection
     let elmBody = document.body;
     if(elmBody.contains(btnPre) && elmBody.contains(btnNext) && elmBody.contains(owl)) {
-    btnPre.onclick = () => {
+    btnNext.onclick = () => {
         // remove all text nodes
         owl.childNodes.forEach(elm => {
             elm.nodeType != 1 && elm.parentNode.removeChild(elm);
@@ -81,7 +81,7 @@ window.onload = () => {
         owl.appendChild(owl.firstChild);
     }
 
-    btnNext.onclick = () => {
+    btnPre.onclick = () => {
         // remove all text nodes
         owl.childNodes.forEach(elm => {
             elm.nodeType != 1 && elm.parentNode.removeChild(elm);
