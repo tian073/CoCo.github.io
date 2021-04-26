@@ -167,6 +167,10 @@
     }
 
     /* Product Details Section */
+    .details-left .selection .owl img {
+        margin: 0 0.3rem;
+    }
+
     .details-right h3 {
         margin-top: 2rem;
     }
@@ -404,7 +408,7 @@
     .details-left .selection .owl img {
         width: 6rem;
         height: 6rem;
-        margin: 0 0.3rem;
+        margin: 0 0.25rem;
     }
 
     .selection .round-left, .selection .round-right {
@@ -575,7 +579,7 @@
     .details-left .selection .owl img {
         width: 8rem;
         height: 8rem;
-        margin: 0 0.3rem;
+        margin: 0 0.25rem;
     }
 
     .details-right .stars {
