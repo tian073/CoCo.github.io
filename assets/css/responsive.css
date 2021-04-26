@@ -1,3 +1,34 @@
+/* Mobile Low Resolution */
+@media (max-width: 450px) {
+    /* Contact Section */
+    .map {
+        height: 30rem;
+    }
+
+    /* Product details section */
+    .details-left img {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .details-left .selection .owl {
+        width: 28rem;
+        height: 8rem;
+        overflow: hidden;
+    }
+
+    .details-left .selection .owl img {
+        width: 8rem;
+        height: 8rem;
+        margin: 0 0.3rem;
+    }
+
+    .selection .round-left, .selection .round-right {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
 /* Mobile */
 @media (max-width: 767px) {
 
@@ -119,7 +150,7 @@
     }
 
     .product-item {
-        margin: 2rem 0 1rem 0;
+        margin: 2rem 0 0 0;
     }
 
     .product-item p.card-title {
@@ -128,6 +159,11 @@
 
     .product-item p.card-des {
         font-size: 1.6rem;
+    }
+
+    /* Product see-more */
+    .product-section .product-see-more {
+        margin-top: 1rem;
     }
 
     /* Product Details Section */
@@ -254,7 +290,7 @@
     }
 }
 
-/* Tablet & PC Resolution Low */
+/* Tablet & PC Low Resolution*/
 @media (min-width: 768px) and (max-width: 991px) {
     /* Header Section */
 
@@ -341,17 +377,34 @@
     }
 
     .product-item {
-        margin: 2rem 0 3rem 0;
+        margin: 2rem 0 0 0;
     }
 
     .product-item .item {
         margin-top: 2rem;
     }
 
+    /* Product see-more*/
+    .product-section .product-see-more {
+        margin-top: 3rem;
+    }
+
     /* Product details section */
-    .details-left .selection img{
+    .details-left img {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .details-left .selection .owl {
+        width: 20rem;
+        height: 6rem;
+        overflow: hidden;
+    }
+
+    .details-left .selection .owl img {
         width: 6rem;
         height: 6rem;
+        margin: 0 0.3rem;
     }
 
     .selection .round-left, .selection .round-right {
@@ -424,7 +477,7 @@
     }
 }
 
-/* PC Resolution High */
+/* PC High Resolution */
 @media (min-width: 992px) and (max-width: 1199px) {
     /* Header Section */
     /* Header top */
@@ -508,9 +561,21 @@
     }
 
     /* Product details section */
-    .details-left .selection img{
+    .details-left img {
+        width: 100%;
+        height: 35rem;
+    }
+
+    .details-left .selection .owl {
+        width: 26rem;
+        height: 8rem;
+        overflow: hidden;
+    }
+
+    .details-left .selection .owl img {
         width: 8rem;
         height: 8rem;
+        margin: 0 0.3rem;
     }
 
     .details-right .stars {
